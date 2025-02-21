@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+#timer {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #3498db;
+    margin: 1rem 0;
+}
+
+#startBtn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#startBtn:hover {
+    background: #2980b9;
+}
+
+/* Ads/Donations Styling */
+.ad-banner, .donation, .premium {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.ad-banner a, .donation a, .premium a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+#premiumLink {
+    font-weight: bold;
+    border-bottom: 2px dashed #e74c3c;
+}
