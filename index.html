@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BreatheBreak - Take a 1-Minute Reset</title>
+    <title>ZenBreak - High-End Relaxation</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background"></div>
     <div class="container">
-        <h1>Take a 1-Minute Break 🌿</h1>
-        <div id="timer">01:00</div>
+        <h1>Take a minute Break 🌸</h1>
+        <div class="timer-container">
+            <div class="circular-progress">
+                <div class="progress"></div>
+                <div id="timer">01:00</div>
+            </div>
+        </div>
         <button id="startBtn">Start Your Break</button>
         <button id="restartBtn" style="display: none;">Start Again</button>
+        <div class="sound-options">
+            <label for="soundSelector">Choose Sound:</label>
+            <select id="soundSelector">
+                <option value="sounds/rain.mp3">Rain</option>
+                <option value="sounds/ocean.mp3">Ocean</option>
+                <option value="sounds/forest.mp3">Forest</option>
+            </select>
+        </div>
         <audio id="ambientSound" loop>
             <source src="sounds/rain.mp3" type="audio/mpeg">
         </audio>
