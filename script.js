@@ -4,7 +4,7 @@ const timerDisplay = document.getElementById('timer');
 const ambientSound = document.getElementById('ambientSound');
 const soundSelector = document.getElementById('soundSelector');
 const progress = document.querySelector('.circular-progress');
-let timeLeft = 300; // 5 minutes
+let timeLeft = 60; // 1 minute
 let timer;
 
 function startTimer() {
@@ -20,7 +20,7 @@ function startTimer() {
         timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
         // Update progress bar
-        const progressValue = ((300 - timeLeft) / 300) * 360;
+        const progressValue = ((60 - timeLeft) / 60) * 360;
         progress.style.background = `conic-gradient(#3498db ${progressValue}deg, transparent ${progressValue}deg)`;
 
         if (timeLeft <= 0) {
@@ -33,13 +33,13 @@ function startTimer() {
 }
 
 startBtn.addEventListener('click', () => {
-    timeLeft = 300; // Reset timer
-    timerDisplay.textContent = "05:00"; // Reset display
+    timeLeft = 60; // Reset timer
+    timerDisplay.textContent = "01:00"; // Reset display
     startTimer();
 });
 
 restartBtn.addEventListener('click', () => {
-    timeLeft = 300; // Reset timer
-    timerDisplay.textContent = "05:00"; // Reset display
+    timeLeft = 60; // Reset timer
+    timerDisplay.textContent = "01:00"; // Reset display
     startTimer();
 });
