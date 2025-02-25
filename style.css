@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
 }
 
+/* Background Image */
 .background {
     position: absolute;
     top: 0;
@@ -22,14 +24,16 @@ body {
     z-index: -1;
 }
 
+/* Main Container */
 .container {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
     backdrop-filter: blur(10px);
+    border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Heading */
 h1 {
     color: white;
     font-weight: 600;
@@ -37,6 +41,7 @@ h1 {
     font-size: 2.5rem;
 }
 
+/* Circular Progress Bar */
 .timer-container {
     position: relative;
     width: 200px;
@@ -69,6 +74,7 @@ h1 {
     color: white;
 }
 
+/* Buttons */
 #startBtn, #restartBtn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
@@ -86,6 +92,7 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Sound Selector */
 .sound-options {
     margin-top: 1.5rem;
     color: white;

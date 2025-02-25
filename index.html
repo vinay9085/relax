@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relax Break</title>
+    <title>Relaxation Break</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Image -->
     <div class="background"></div>
+
+    <!-- Main Container -->
     <div class="container">
-        <h1>Let's take a Break 🌸</h1>
+        <h1>Take a Break 🌸</h1>
+
+        <!-- Circular Progress Bar -->
         <div class="timer-container">
             <div class="circular-progress">
                 <div class="progress"></div>
                 <div id="timer">01:00</div>
             </div>
         </div>
+
+        <!-- Buttons -->
         <button id="startBtn">Start Your Break</button>
         <button id="restartBtn" style="display: none;">Start Again</button>
+
+        <!-- Sound Selector -->
         <div class="sound-options">
             <label for="soundSelector">Choose Sound:</label>
             <select id="soundSelector">
-                <option value="sounds/rain.mp3">Rain</option>
-                <option value="sounds/ocean.mp3">Ocean</option>
-                <option value="sounds/forest.mp3">Forest</option>
+                <option value="sounds/rain.mp3">🌧️ Rain</option>
+                <option value="sounds/ocean.mp3">🌊 Ocean</option>
+                <option value="sounds/forest.mp3">🌳 Forest</option>
             </select>
         </div>
+
+        <!-- Ambient Sound -->
         <audio id="ambientSound" loop>
             <source src="sounds/rain.mp3" type="audio/mpeg">
         </audio>
