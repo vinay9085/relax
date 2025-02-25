@@ -12,7 +12,7 @@ body {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
 }
 
-/* Background Image */
+/* Background Image with Animation */
 .background {
     position: absolute;
     top: 0;
@@ -22,6 +22,13 @@ body {
     background: url('background.jpg') no-repeat center center/cover;
     opacity: 0.7;
     z-index: -1;
+    animation: zoomPan 20s infinite ease-in-out;
+}
+
+@keyframes zoomPan {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 /* Main Container */
@@ -75,7 +82,7 @@ h1 {
 }
 
 /* Buttons */
-#startBtn, #restartBtn {
+#startBtn, #restartBtn, .share-btn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
     background: #3498db;
@@ -87,7 +94,7 @@ h1 {
     margin-top: 1.5rem;
 }
 
-#startBtn:hover, #restartBtn:hover {
+#startBtn:hover, #restartBtn:hover, .share-btn:hover {
     background: #2980b9;
     transform: scale(1.05);
 }
@@ -105,4 +112,15 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
     color: white;
     font-family: 'Poppins', sans-serif;
+}
+
+/* Confetti Canvas */
+#confetti-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
 }

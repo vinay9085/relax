@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Background Image -->
+    <!-- Background Image with Animation -->
     <div class="background"></div>
 
     <!-- Main Container -->
@@ -37,12 +37,19 @@
             </select>
         </div>
 
-        <!-- Ambient Sound -->
-        <audio id="ambientSound" loop>
-            <source src="sounds/rain.mp3" type="audio/mpeg">
-        </audio>
+        <!-- Share Button -->
+        <button id="shareBtn" class="share-btn">Share Your Break</button>
     </div>
 
+    <!-- Ambient Sound -->
+    <audio id="ambientSound" loop>
+        <source src="sounds/rain.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Confetti Animation -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="confetti.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

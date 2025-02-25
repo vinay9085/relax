@@ -4,6 +4,7 @@ const timerDisplay = document.getElementById('timer');
 const ambientSound = document.getElementById('ambientSound');
 const soundSelector = document.getElementById('soundSelector');
 const progress = document.querySelector('.circular-progress');
+const shareBtn = document.getElementById('shareBtn');
 let timeLeft = 60; // 1 minute
 let timer;
 
@@ -28,6 +29,7 @@ function startTimer() {
             timerDisplay.textContent = "Time's up! 🎉";
             ambientSound.pause();
             restartBtn.style.display = 'block';
+            triggerConfetti(); // Trigger confetti animation
         }
     }, 1000);
 }
@@ -43,3 +45,20 @@ restartBtn.addEventListener('click', () => {
     timerDisplay.textContent = "01:00"; // Reset display
     startTimer();
 });
+
+// Share Button
+shareBtn.addEventListener('click', () => {
+    navigator.share({
+        title: 'ZenBreak',
+        text: 'I just took a 1-minute break! 🌿',
+        url: window.location.href,
+    });
+});
+
+// Confetti Animation
+function triggerConfetti() {
+    const confettiSettings = { target: 'confetti-canvas', max: 200 };
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+    setTimeout(() => confetti.clear(), 5000); // Clear confetti after 5 seconds
+}
