@@ -1,13 +1,16 @@
 const startBtn = document.getElementById('startBtn');
+const restartBtn = document.getElementById('restartBtn');
 const timerDisplay = document.getElementById('timer');
 const ambientSound = document.getElementById('ambientSound');
 let timeLeft = 60; // 1 minute
+let timer;
 
-startBtn.addEventListener('click', () => {
+function startTimer() {
     startBtn.style.display = 'none';
+    restartBtn.style.display = 'none';
     ambientSound.play();
-    
-    const timer = setInterval(() => {
+
+    timer = setInterval(() => {
         timeLeft--;
         const minutes = Math.floor(timeLeft / 60);
         const seconds = timeLeft % 60;
@@ -17,8 +20,19 @@ startBtn.addEventListener('click', () => {
             clearInterval(timer);
             timerDisplay.textContent = "Time's up! 🎉";
             ambientSound.pause();
-            // Show post-break ad/upsell
-            document.querySelector('.premium').style.display = 'block';
+            restartBtn.style.display = 'block'; // Show "Start Again" button
         }
     }, 1000);
+}
+
+startBtn.addEventListener('click', () => {
+    timeLeft = 60; // Reset timer
+    timerDisplay.textContent = "01:00"; // Reset display
+    startTimer();
+});
+
+restartBtn.addEventListener('click', () => {
+    timeLeft = 60; // Reset timer
+    timerDisplay.textContent = "01:00"; // Reset display
+    startTimer();
 });

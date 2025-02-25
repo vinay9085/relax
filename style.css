@@ -29,7 +29,7 @@ h1 {
     margin: 1rem 0;
 }
 
-#startBtn {
+#startBtn, #restartBtn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
     background: #3498db;
@@ -40,24 +40,6 @@ h1 {
     transition: background 0.3s;
 }
 
-#startBtn:hover {
+#startBtn:hover, #restartBtn:hover {
     background: #2980b9;
-}
-
-/* Ads/Donations Styling */
-.ad-banner, .donation, .premium {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-
-.ad-banner a, .donation a, .premium a {
-    color: #e74c3c;
-    text-decoration: none;
-}
-
-#premiumLink {
-    font-weight: bold;
-    border-bottom: 2px dashed #e74c3c;
 }
